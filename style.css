@@ -1,0 +1,150 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+background: #f8f9fc;
+color: #333;
+}
+
+/* Container */
+.container {
+width: 90%;
+max-width: 1200px;
+margin: auto;
+}
+
+/* Header */
+.header {
+background: white;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.header .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 0;
+}
+
+.logo {
+color: #4f46e5;
+}
+
+/* Navbar */
+.navbar a {
+margin-left: 20px;
+text-decoration: none;
+color: #333;
+font-weight: 500;
+transition: 0.3s;
+}
+
+.navbar a:hover {
+color: #4f46e5;
+}
+
+/* Hero */
+.hero {
+text-align: center;
+padding: 60px 20px;
+}
+
+.hero h2 {
+font-size: 32px;
+margin-bottom: 10px;
+}
+
+.hero p {
+color: #666;
+}
+
+/* Gallery main grid */
+.gallery {
+display: flex;
+flex-direction: column;
+gap: 40px;
+padding-bottom: 40px;
+}
+
+/* Category sections */
+#nature,
+#animals,
+#travel,
+#food,
+#technology {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 20px;
+}
+
+/* Card */
+.card {
+position: relative;
+overflow: hidden;
+border-radius: 14px;
+cursor: pointer;
+background: white;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+transition: 0.5s;
+}
+
+/* Overlay */
+.overlay {
+position: absolute;
+bottom: 0;
+background: linear-gradient(transparent, rgba(0,0,0,0.7));
+color: white;
+width: 100%;
+padding: 15px;
+font-size: 18px;
+}
+
+/* Hover */
+.card:hover img {
+transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+text-align: center;
+padding: 20px;
+background: white;
+margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+.header .container {
+flex-direction: column;
+gap: 10px;
+}
+
+.navbar {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.navbar a {
+margin: 5px 10px;
+}
+
+.hero h2 {
+font-size: 24px;
+}
+
+}
